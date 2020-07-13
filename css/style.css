@@ -1,0 +1,115 @@
+body {
+	margin: 0px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: #111;
+}
+.clock {
+	margin: auto;
+	background-color: #fff;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: #808080 solid 7px;
+	box-shadow: 0 0 30px #808080;
+}
+.dot {
+	position: absolute;
+	height: 20px;
+	width: 3px;
+	background-color: #808080;
+}
+.dot:nth-child(1) {
+	transform: translate(148px, 5px);
+}
+.dot:nth-child(2) {
+	transform: translate(215px, 24px) rotate(30deg);
+}
+.dot:nth-child(3) {
+	transform: translate(265px, 72px) rotate(60deg);
+}
+.dot:nth-child(4) {
+	transform: translate(283px, 139.5px) rotate(90deg);
+}
+.dot:nth-child(5) {
+	transform: translate(265px, 207px) rotate(120deg);
+}
+.dot:nth-child(6) {
+	transform: translate(217px, 257px) rotate(150deg);
+}
+.dot:nth-child(7) {
+	transform: translate(148px, 275px);
+}
+.dot:nth-child(8) {
+	transform: translate(81px, 258px) rotate(210deg);
+}
+.dot:nth-child(9) {
+	transform: translate(32px, 208px) rotate(240deg);
+}
+.dot:nth-child(10) {
+	transform: translate(13px, 140.5px) rotate(90deg);
+}
+.dot:nth-child(11) {
+	transform: translate(31px, 73px) rotate(300deg);
+}
+.dot:nth-child(12) {
+	transform: translate(81px, 24px) rotate(330deg);
+}
+.second-needle {
+	height: 147px;
+	width: 3px;
+	position: absolute;
+	background-color: red;
+	border-radius: 3px 3px 0 0;
+	transform-origin: 50% 91.9%;
+	transition: all 1s linear;
+	transform: translate(148px, 15px);
+	box-shadow: 5px 5px 5px #808080;
+}
+.second-needle::before {
+	content: '';
+	height: 13px;
+	width: 13px;
+	background-color: red;
+	position: absolute;
+	border-radius: 50%;
+	transform: translate(-5px, 128.5px);
+}
+.second-needle::after {
+	content: '';
+	height: 30px;
+	width: 5px;
+	background-color: red;
+	position: absolute;
+	border-radius: 2px;
+	transform: translate(-1px, 146px);
+	box-shadow: 5px 5px 5px #808080;
+}
+.minute-needle {
+	height: 120px;
+	width: 6px;
+	position: absolute;
+	border-radius: 6px 6px 0 0;
+	background-color: black;
+	transform-origin: 50% 100%;
+	transition: all 1s linear;
+	transform: translate(146.2px, 30px);
+	box-shadow: 3px 3px 3px #80808070;
+}
+.hour-needle {
+	height: 90px;
+	width: 8px;
+	position: absolute;
+	border-radius: 6px 6px 0 0;
+	background-color: black;
+	transform-origin: 50% 100%;
+	transition: all 1s linear;
+	transform: translate(145.5px, 60px);
+	box-shadow: 3px 3px 3px #80808070;
+}
+.time {
+	margin: auto;
+	font: 50px 'Calibri';
+	color: #fff;
+}
